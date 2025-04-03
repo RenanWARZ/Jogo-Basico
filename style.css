@@ -1,0 +1,137 @@
+♣{
+margin: 0; 
+padding: 0;
+box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 710px;
+    border-bottom: 10px solid #058d0e;
+    margin: 0 auto;
+    position: relative; /* respeita a delimitação do quadro */
+    overflow: hidden; /* tudo oque sair da delimitação do quadro, não apareça na tela */
+    background-image: url(fundo.gif);
+    background-repeat: no-repeat;
+    background-size: 1600px 795px;   
+}
+
+.pipe{
+    position: absolute; /* trabalha com img idependentes */
+    bottom: 0; /* para ficar embaixo da tela */
+    width: 150px;
+    animation: pipe-animation 1.5s infinite linear; /* chamando o Keyframe, o cano vai ter uma animação de 2 segundo, indo do ponto 0 ao 100% da tela
+    com uma animação Infinita e colocando linear para ir do começo ao fim*/
+
+}
+
+.mario{
+    width: 155px;
+    position: absolute;
+    bottom: 0; /* se agente colocar 180px ele sobe, então é a animação que queremos */
+    padding-left: 80px;
+}
+
+.jump{
+    animation: jump 800ms  ease-out; /* ease-out tem uma animação um pouco suave */
+}
+
+.clouds{
+    position: absolute;
+    width: 520px;    
+    animation: clouds-animation 8s infinite linear;
+
+}
+
+.nuvens{
+    position:absolute;
+    width: 220px;    
+    animation: nuvens-animation 7s infinite linear;
+
+}
+
+.nuven{
+    position:absolute;
+    width: 220px;    
+    animation: nuven-animation 7s infinite linear;
+
+}
+
+#gameOverBtn {
+    display: none; /* Ocultar inicialmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 50px;
+    background-color:#0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@keyframes pipe-animation{
+    from{ /* ele vai começar com -80px por conta que ele começa a ter uma animação que sai da tela, escondida que não de para ver */
+        right: -80px;
+    }
+    to{ /* e vai até 100% da tela, fazendo uma animação de deslizar o cano */
+    right: 100%;
+    }
+}
+
+@keyframes jump{
+
+    0%{
+    bottom: 0;
+    }
+
+    40%{
+    bottom: 180px;
+}
+
+    50%{
+    bottom: 180px;
+}
+
+    60%{
+    bottom: 180px;
+    }
+
+    100%{
+    bottom: 0;;
+    }
+
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -100px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes nuvens-animation{
+    from{
+        right: -400px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes nuven-animation{
+    from{
+        right: -250px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
