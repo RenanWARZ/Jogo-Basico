@@ -23,7 +23,7 @@ const loop = setInterval(() =>{
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
 
-        mario.src='lose.gif';
+        mario.src='https://github.com/RenanWARZ/Jogo-Basico/blob/main/lose.gif?raw=true';
         mario.style.width ='155px'
         mario.style.marginLeft = '0px'
 

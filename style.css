@@ -11,7 +11,7 @@ box-sizing: border-box;
     margin: 0 auto;
     position: relative; /* respeita a delimitação do quadro */
     overflow: hidden; /* tudo oque sair da delimitação do quadro, não apareça na tela */
-    background-image: url(fundo.gif);
+    background-image: url(https://github.com/RenanWARZ/Jogo-Basico/blob/main/fundo.gif?raw=true);
     background-repeat: no-repeat;
     background-size: 1600px 795px;   
 }
